@@ -1,0 +1,7 @@
+form.todo-new-form input, 
+form.todo-new-form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}

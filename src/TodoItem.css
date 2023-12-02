@@ -1,0 +1,81 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid tan;
+  padding: 20px 0;
+  min-height: 120px;
+}
+
+.todo:last-child {
+  border-bottom: none;
+}
+
+.todo h3::first-letter,
+.todo p::first-letter {
+  text-transform: uppercase;
+}
+
+.todo h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.todo p {
+  margin-bottom: 0;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+form.todo-update-form,
+form.todo-update-form input,
+form.todo-update-form button {
+  width: 100%;
+}
+
+form.todo-update-form input {
+  padding: 10px;
+}
+
+form.todo-update-form input:first-child {
+  margin-bottom: 12px;
+}
+
+form.todo-update-form {
+  margin: 0 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100%;
+  align-items: center;
+}
+
+.todo-controls {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-controls button {
+  background: tan;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  height: 25px;
+  width: 25px;
+  margin: 2px auto;
+}
+
+.todo-controls button:focus {
+  background: goldenrod !important;
+}
+
+.todo-complete {
+  color: gray;
+  min-height: 80px;
+  border-color: gray;
+}
+
+.todo-complete button:not(.complete-icon) {
+  display: none;
+}

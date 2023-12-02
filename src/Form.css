@@ -1,0 +1,25 @@
+form input,
+form button {
+  border: none;
+}
+
+form input:focus,
+form button:focus,
+button:focus {
+  outline: 0;
+  border: 1px solid goldenrod;
+}
+
+form input, 
+form input::placeholder {
+  color: white;
+}
+
+form input {
+  background: gray;
+}
+
+form button {
+  background: tan;
+  color: white;
+}
