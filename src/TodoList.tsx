@@ -6,12 +6,13 @@ import './TodoList.css';
 type TodoListProps = { 
   todos: Todo[], 
   onRemove: (todo: Todo) => any, 
-  onUpdate: (todo: Todo) => any 
+  onUpdate: (todo: Todo) => any,
 }
 
 export const TodoList: React.FunctionComponent<TodoListProps> = ({ todos, onRemove, onUpdate }) => {
   const completedTodos = todos.filter(todo => todo.completed);
   const inCompleteTodos = todos.filter(todo => !todo.completed);
+
   return (
     <div className="todo-lists">
       {inCompleteTodos.length === 0 && completedTodos.length > 0 ? 

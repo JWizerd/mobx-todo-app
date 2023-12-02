@@ -7,7 +7,6 @@ export interface ITodoStore {
   completedTodos: number
   upsertTodo: (todo: UpsertTodo) => void
   removeTodo: (todo: Todo) => void
-  clearTodos: () => void
 }
 
 class TodoStore implements ITodoStore {
@@ -45,10 +44,6 @@ class TodoStore implements ITodoStore {
     if (index !== -1) {
       this.todos.splice(index, 1)
     }
-  }
-
-  clearTodos() {
-    this.todos = [];
   }
 }
 
