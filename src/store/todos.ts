@@ -1,6 +1,7 @@
 import { makeAutoObservable } from "mobx";
 import { v4 as uuidv4 } from 'uuid';
 import { Todo, UpsertTodo } from "../types";
+import { makePersistable } from "mobx-persist-store";
 
 export interface ITodoStore {
   todos: Todo[]
@@ -13,6 +14,16 @@ class TodoStore implements ITodoStore {
   todos: Todo[] = []
   constructor() {
     makeAutoObservable(this)
+    makePersistable(
+      this,
+      {
+        name: 'TodoStore',
+        properties: ['todos'],
+        storage: localStorage,
+        expireIn: 86400000, // One day in milliseconds
+        removeOnExpiration: true,
+      }
+    )
   }
 
   get completedTodos() {
