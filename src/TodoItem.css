@@ -76,6 +76,6 @@ form.todo-update-form {
   border-color: gray;
 }
 
-.todo-complete button:not(.complete-icon) {
+.todo-complete .edit-icon {
   display: none;
 }

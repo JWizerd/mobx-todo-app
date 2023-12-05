@@ -105,7 +105,7 @@ export const TodoItem = ({ todo, onRemove, onUpdate }: TodoItemProps) => {
           &#x2713;
         </button>
 
-        <button className="remove-icon" onClick={handleRemove}>
+        <button className="remove-icon" style={{ background: complete ? 'red' : 'tan' }} onClick={handleRemove}>
           &#10005;
         </button>
 
